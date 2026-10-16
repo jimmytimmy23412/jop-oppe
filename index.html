@@ -1,1 +1,105 @@
 
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101828">
+  <meta name="description" content="JÕP ÕPPE — matemaatika ja eesti keele kordamine õppemängude ja harjutustega.">
+  <title>JÕP ÕPPE — Õpi omas tempos</title>
+  <style>
+    :root{--bg:#f5f7fb;--paper:#fff;--ink:#172033;--muted:#657087;--line:#e3e8f1;--blue:#3659e3;--blue-dark:#2443bd;--mint:#dff8ed;--lav:#eceaff;--shadow:0 14px 40px rgba(26,38,70,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit}button,a{ -webkit-tap-highlight-color:transparent}.wrap{width:min(1100px,calc(100% - 36px));margin:auto}
+    header{background:rgba(255,255,255,.9);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:850;letter-spacing:-.04em;font-size:1.2rem}.logo{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:var(--blue);color:white;font-weight:900;letter-spacing:-.08em}.navlinks{display:flex;align-items:center;gap:22px}.navlinks a{text-decoration:none;color:var(--muted);font-size:.92rem;font-weight:650}.navlinks a:hover{color:var(--blue)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:12px;background:var(--blue);color:white!important;text-decoration:none;font-weight:750;border:1px solid var(--blue);cursor:pointer;transition:.18s}.nav-cta:hover,.btn:hover{background:var(--blue-dark);transform:translateY(-1px)}.btn.secondary{background:white;color:var(--ink)!important;border-color:var(--line)}.btn.secondary:hover{border-color:#b9c5df;background:#fafbff}.menu{display:none;background:white;border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:1.1rem}
+    .hero{padding:76px 0 54px;background:radial-gradient(ellipse at 12% 5%,#e4eaff 0,transparent 35%),radial-gradient(ellipse at 95% 35%,#dff8ed 0,transparent 32%)}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:48px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border:1px solid var(--line);border-radius:999px;color:var(--blue);font-size:.82rem;font-weight:800}.dot{width:7px;height:7px;border-radius:50%;background:#24a878}.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.065em;margin:20px 0}.hero h1 span{color:var(--blue)}.hero p{font-size:1.12rem;color:var(--muted);max-width:570px;margin:0 0 25px}.actions{display:flex;flex-wrap:wrap;gap:11px}.note{font-size:.84rem!important;margin-top:16px!important}.preview{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow);transform:rotate(1deg)}.preview-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.preview-label{font-size:.8rem;color:var(--muted);font-weight:700}.pill{font-size:.76rem;background:var(--mint);color:#147653;padding:5px 9px;border-radius:999px;font-weight:800}.sample{border:1px solid var(--line);padding:16px;border-radius:15px;margin-top:11px}.sample small{color:var(--muted);font-weight:700}.sample strong{display:block;font-size:1.05rem;margin:5px 0 12px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:8px}.answer{border:1px solid var(--line);border-radius:9px;padding:8px;text-align:center;font-weight:750;background:#fafbff}.answer:first-child{border-color:#b7c5ff;background:#eef1ff;color:var(--blue)}
+    section{padding:58px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.kicker{color:var(--blue);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:850}.section-head h2{font-size:clamp(1.8rem,4vw,2.5rem);letter-spacing:-.045em;margin:5px 0}.section-head p{margin:0;color:var(--muted);max-width:520px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 5px 20px rgba(26,38,70,.035)}.card-head{display:flex;align-items:center;gap:14px;margin-bottom:14px}.subject-icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;font-size:1.6rem;background:var(--lav)}.subject-icon.green{background:var(--mint)}.card h3{font-size:1.35rem;letter-spacing:-.035em;margin:0}.card-head p{margin:2px 0 0;color:var(--muted);font-size:.9rem}.card>p{color:var(--muted);margin:0 0 18px}.resource-list{display:grid;gap:10px}.resource{display:flex;align-items:center;gap:12px;padding:13px;border:1px solid var(--line);border-radius:13px}.resource .r-icon{font-size:1.2rem}.resource .r-text{flex:1;min-width:0}.resource strong{display:block;font-size:.94rem}.resource small{display:block;color:var(--muted);font-size:.8rem}.resource .btn{padding:8px 11px;font-size:.84rem;white-space:nowrap}.resource .btn[aria-disabled="true"]{background:#f0f2f7;color:#737d91!important;border-color:#e3e8f1;cursor:not-allowed;transform:none}
+    .how{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:20px;border:1px solid var(--line);border-radius:17px;background:#fff}.step-num{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#eef1ff;color:var(--blue);font-weight:900;margin-bottom:12px}.step h3{margin:0 0 5px;font-size:1.05rem}.step p{margin:0;color:var(--muted);font-size:.93rem}
+    .discord{background:#111a32;color:#fff;border-radius:22px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:25px}.discord p{color:#c4cce0;margin:6px 0 0}.discord .btn{background:#fff;color:#172033!important;border-color:#fff;white-space:nowrap}.discord .btn:hover{background:#e9edff}
+    footer{padding:27px 0;color:var(--muted);font-size:.87rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}.foot strong{color:var(--ink)}
+    @media(max-width:760px){.navlinks{display:none;position:absolute;top:72px;left:0;right:0;padding:18px;background:white;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:7px}.menu{display:block}.nav-cta{display:none}.hero{padding:48px 0 38px}.hero-grid{grid-template-columns:1fr;gap:30px}.preview{transform:none;max-width:520px}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.discord{align-items:start;flex-direction:column}.resource{align-items:start;flex-wrap:wrap}.resource .r-text{min-width:calc(100% - 48px)}.resource .btn{margin-left:36px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="JÕP ÕPPE avaleht"><span class="logo">JÕP</span><span>JÕP ÕPPE</span></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#oppematerjalid">Õppematerjalid</a><a href="#kuidas">Kuidas kasutada?</a><a href="#kogukond">Kogukond</a>
+    </nav>
+    <a class="nav-cta" href="#oppematerjalid">Alusta õppimist <span aria-hidden="true">↗</span></a>
+    <button class="menu" id="menu" aria-label="Ava menüü" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span> Kordamine, mis on sinu käeulatuses</span>
+        <h1>Õpi targemalt.<br><span>Harjuta omas tempos.</span></h1>
+        <p>JÕP ÕPPE koondab kontrolltöödeks kordamise, interaktiivsed õppemängud ja allalaaditavad materjalid ühte lihtsasse kohta.</p>
+        <div class="actions"><a class="btn" href="#oppematerjalid">Vaata õppematerjale <span aria-hidden="true">↓</span></a><a class="btn secondary" href="#kuidas">Kuidas see töötab?</a></div>
+        <p class="note">Tasuta kasutamiseks · Ava brauseris · Osa materjale saab alla laadida</p>
+      </div>
+      <div class="preview" aria-label="Õppemängu kujunduse näidis">
+        <div class="preview-top"><strong>Kiire harjutus</strong><span class="pill">Näidis</span></div>
+        <div class="sample"><small>MATEMAATIKA · RUUTVÕRRAND</small><strong>Millised on võrrandi x² − 5x + 6 = 0 lahendid?</strong><div class="answers"><div class="answer">x = 2 ja 3</div><div class="answer">x = 1 ja 6</div><div class="answer">x = −2 ja −3</div><div class="answer">x = 0 ja 6</div></div></div>
+        <div class="sample" style="background:#f8fffb"><small>ÕPPIMISE NIPP</small><strong>Proovi ise enne vastuse vaatamist.</strong><span style="color:#657087;font-size:.9rem">Harjutamine aitab teadmisi kinnistada.</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="oppematerjalid">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker">Õppematerjalid</span><h2>Vali teema ja alusta</h2></div><p>Siit leiad kordamismaterjalid. Kui lisad uue õppemängu, lisa selle link vastava teema juurde.</p></div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-head"><div class="subject-icon">∑</div><div><h3>Matemaatika</h3><p>Valemid, ülesanded ja kordamine</p></div></div>
+          <p>Harjuta samm-sammult ja kontrolli, kas oskad ülesande iseseisvalt lahendada.</p>
+          <div class="resource-list">
+            <div class="resource"><span class="r-icon">🎯</span><div class="r-text"><strong>Ruutvõrrandite kordamine</strong><small>Interaktiivne õppemäng</small></div><a class="btn" href="mangud/ruutvorrandid.html">Ava mäng</a></div>
+            <div class="resource"><span class="r-icon">📄</span><div class="r-text"><strong>Matemaatika materjalid</strong><small>Allalaaditavad failid</small></div><a class="btn secondary" href="allalaadimised/" aria-label="Vaata matemaatika allalaadimisi">Vaata faile</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-head"><div class="subject-icon green">Aa</div><div><h3>Eesti keel</h3><p>Keel, õigekiri ja kordamisülesanded</p></div></div>
+          <p>Korda teemasid, testi oma teadmisi ja valmista end kontrolltööks ette.</p>
+          <div class="resource-list">
+            <div class="resource"><span class="r-icon">🧩</span><div class="r-text"><strong>Eesti keele õppemängud</strong><small>Interaktiivsed harjutused</small></div><a class="btn" href="mangud/eesti-keel.html">Ava mäng</a></div>
+            <div class="resource"><span class="r-icon">📄</span><div class="r-text"><strong>Eesti keele materjalid</strong><small>Allalaaditavad failid</small></div><a class="btn secondary" href="allalaadimised/">Vaata faile</a></div>
+          </div>
+        </article>
+      </div>
+      <p style="font-size:.86rem;color:var(--muted);margin-top:15px">Märkus: õppemängude lingid on esialgsed näited. Lisa enda failid GitHubi vastavatesse kaustadesse või muuda linke, et need viitaksid sinu päris materjalidele.</p>
+    </div>
+  </section>
+  <section class="how" id="kuidas">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker">Lihtne kasutada</span><h2>Kolm sammu õppimiseni</h2></div><p>Ei mingit programmi paigaldamist. Ava leht, vali teema ja harjuta.</p></div>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><h3>Vali õppeaine</h3><p>Alusta matemaatikast või eesti keelest ja leia vajalik teema.</p></div>
+        <div class="step"><div class="step-num">2</div><h3>Lahenda ülesandeid</h3><p>Ava õppemäng brauseris ja proovi vastuseid ise leida.</p></div>
+        <div class="step"><div class="step-num">3</div><h3>Laadi fail alla</h3><p>Kui materjalil on allalaadimislink, salvesta see oma seadmesse.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="kogukond">
+    <div class="wrap"><div class="discord"><div><span class="kicker" style="color:#aebaff">JÕP ÕPPE kogukond</span><h2 style="margin:5px 0 0;letter-spacing:-.04em">Uued materjalid ühes kohas.</h2><p>Lisa siia oma Discordi kutselink, et õppijad leiaksid uuendused ja saaksid küsimusi esitada.</p></div><a class="btn" id="discord-link" href="#kogukond">Discordi link lisamata</a></div></div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span><strong>JÕP ÕPPE</strong> · Õpi omas tempos.</span><span>Õppematerjalid on abivahend kordamiseks ega taga kontrolltöö tulemust.</span></div></footer>
+<script>
+  const menu = document.getElementById('menu');
+  const nav = document.getElementById('navlinks');
+  menu.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(open));
+    menu.textContent = open ? '✕' : '☰';
+  });
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); menu.textContent = '☰';
+  }));
+  // Kui Discordi kutselink on olemas, asenda #kogukond päris lingiga.
+</script>
+</body>
+</html>
